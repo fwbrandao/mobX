@@ -1,17 +1,11 @@
-import { autorun, observable } from "mobx";
+import { observable } from "mobx"
 
-class TodoStore {
+export class TodoStore {
   @observable
-  todos = ["eggs", "bacon"];
+  todos = ["eggs", "bacon"]
   @observable
-  filter = "";
+  filter = ""
 }
 
-var store = (window.storw = new TodoStore());
+export default new TodoStore
 
-export default store;
-
-autorun(() => {
-  console.log(store.filter);
-  console.log(store.todos[0]);
-});
